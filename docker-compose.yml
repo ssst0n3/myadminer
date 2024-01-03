@@ -1,0 +1,11 @@
+version: '3'
+services:
+  adminer:
+    build:
+      context: .
+    image: ssst0n3/myadminer:v0.1
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./test.sqlite:/test.sqlite
